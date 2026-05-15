@@ -1,16 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyList - Shopping Cart</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+
+<main class="container">
+    <section class="items-section card">
+        <div class="add-item">
+            <input type="text" placeholder="Назва товару" aria-label="Назва товару">
+            <button class="btn-add" data-tooltip="Додати новий товар">Додати</button>
+        </div>
+
+        <ul class="items-list">
+            <li class="item-row bought">
+                <span class="item-name">Помідори</span>
+                <div class="item-controls">
+                    <span class="quantity-badge">2</span>
+                    <button class="btn-status" data-tooltip="Скасувати покупку">Не куплено</button>
+                </div>
+            </li>
+
+            <li class="item-row">
+                <input type="text" class="item-name-edit" value="Печиво" aria-label="Редагувати назву">
+                <div class="item-controls">
+                    <button class="btn-round minus" data-tooltip="Зменшити">-</button>
+                    <span class="quantity-badge">2</span>
+                    <button class="btn-round plus" data-tooltip="Збільшити">+</button>
+                    <button class="btn-status buy" data-tooltip="Позначити як куплено">Куплено</button>
+                    <button class="btn-round delete" data-tooltip="Видалити">×</button>
+                </div>
+            </li>
+
+            <li class="item-row">
+                <input type="text" class="item-name-edit" value="Сир" aria-label="Редагувати назву">
+                <div class="item-controls">
+                    <button class="btn-round minus disabled" data-tooltip="Зменшити">-</button>
+                    <span class="quantity-badge">1</span>
+                    <button class="btn-round plus" data-tooltip="Збільшити">+</button>
+                    <button class="btn-status buy" data-tooltip="Позначити як куплено">Куплено</button>
+                    <button class="btn-round delete" data-tooltip="Видалити">×</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <aside class="stats-section">
+        <div class="card stats-card">
+            <h3>Залишилося</h3>
+            <div class="stats-tags">
+                <span class="tag">Печиво <span class="tag-num">2</span></span>
+                <span class="tag">Сир <span class="tag-num">1</span></span>
+            </div>
+        </div>
+        <div class="card stats-card">
+            <h3>Куплено</h3>
+            <div class="stats-tags">
+                <span class="tag bought-tag">Помідори <span class="tag-num">2</span></span>
+            </div>
+        </div>
+    </aside>
+</main>
+
+<div class="badge-container">
+    <div class="badge">
+        <span class="badge-title">BuyList</span>
+        <span class="badge-author">Виконав Паламарчук Ярослав</span>
+    </div>
+</div>
+
 </body>
 </html>
